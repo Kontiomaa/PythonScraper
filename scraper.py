@@ -15,7 +15,7 @@ for table in tables:
 	for tr in rows:
 		cols = tr.findAll('td')
 		for td in cols:
-			#Insert correct charset below
+			#Insert correct charset below (current: cp1252=windows-1252)
 			f.write(td.text.encode('cp1252'))
 			f.write(';')
 f.close()
