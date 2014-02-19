@@ -9,7 +9,7 @@ soup = BeautifulSoup(urllib2.urlopen(url).read())
 
 f = open('datafile','w')
 
-tables = soup.findAll('table', attrs={'class': 'table'})
+tables = soup.findAll('table')
 for table in tables:
 	rows = table.findAll('tr')
 	for tr in rows:
